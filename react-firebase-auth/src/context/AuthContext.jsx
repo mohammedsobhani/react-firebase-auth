@@ -11,16 +11,14 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // true until Firebase tells us the auth state
-
-  // Firebase restores the session from browser storage on refresh,
-  // so onAuthStateChanged fires with the saved user -> stays logged in.
+  const [loading, setLoading] = useState(true); 
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
     });
-    return unsubscribe; // cleanup listener
+    return unsubscribe; 
   }, []);
 
   const register = (email, password) =>
