@@ -1,4 +1,4 @@
-##C243066 
+<b>C243066<\b> 
 ## Project Description
 A Single Page Application (SPA) built with **React (Vite)**, **React Router v6**, and **Firebase v10 Authentication**. The app demonstrates client-side routing, global authentication state management, session persistence across page refreshes, and route-level access control.
 
